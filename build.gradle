@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         mavenLocal()
-        jcenter()
+        mavenCentral()
         maven { url 'https://maven.google.com' }
         google()
     }
@@ -21,7 +21,7 @@ plugins {
 allprojects {
     repositories {
         mavenLocal()
-        jcenter()
+        mavenCentral()
         maven { url "https://maven.google.com" }
         maven { url 'https://maven.fabric.io/public' }
     }
