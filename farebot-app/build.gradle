@@ -21,10 +21,11 @@
  */
 
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
+apply plugin: 'com.google.firebase.crashlytics'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
 
 dependencies {
     implementation project(':farebot-base')
@@ -72,11 +73,10 @@ dependencies {
     implementation libs.supportV7CardView
     implementation libs.supportV7RecyclerView
 
-    implementation(libs.crashlytics) {
-        transitive = true
-    }
 
     implementation libs.dagger
+    implementation 'com.google.firebase:firebase-crashlytics:17.2.1'
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
     kapt libs.daggerCompiler
 }
 
